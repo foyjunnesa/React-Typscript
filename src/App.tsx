@@ -1,25 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Container from './components/Container';
+import Teacher from './components/Teacher';
 
-function App() {
+const App: React.FC = () => {
+
+  const teacherList = [
+    {
+      firstName: "Sakib",
+      lastName: "Ahmed"
+    },
+    {
+      firstName: "Jahid",
+      lastName: "Alom"
+    },
+    {
+      firstName: "Sultan",
+      lastName: "Shah"
+    },
+  ]
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <Container name="Foyjunnesa Mayna" messages={22} isLogged={false} />
+      <Teacher teacherList={teacherList} />
     </div>
+
+
   );
 }
 
